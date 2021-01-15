@@ -28,7 +28,7 @@ namespace PHStudIPSync
                 user = new SyncCommandUser()
                 {
                     login = userNameTextBox.Text,
-                    password = userNameTextBox.Text
+                    password = passwordTextBox.Text
                 },
                 files_destination = dataFolderTextBox.Text,
                 media_destination = mediaFolderTextBox.Text
