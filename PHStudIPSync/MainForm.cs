@@ -22,13 +22,20 @@ namespace PHStudIPSync
         private void syncButton_Click(object sender, EventArgs e)
         {
             var syncCommand = new SyncCommand();
+
+            syncCommand.SetData(new SyncCommandData
+            {
+                user = new SyncCommandUser()
+                {
+                    login = userNameTextBox.Text,
+                    password = userNameTextBox.Text
+                },
+                files_destination = dataFolderTextBox.Text,
+                media_destination = mediaFolderTextBox.Text
+            });
             syncCommand.Execute();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void browseDataFolderButton_Click(object sender, EventArgs e)
         {
@@ -42,11 +49,6 @@ namespace PHStudIPSync
                     dataFolderTextBox.Text = fbd.SelectedPath;
                 }
             }
-        }
-
-        private void phBackgroundPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -71,9 +73,5 @@ namespace PHStudIPSync
             }
         }
 
-        private void syncToolTitle_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
