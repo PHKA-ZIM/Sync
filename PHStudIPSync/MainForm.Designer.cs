@@ -90,7 +90,7 @@
             this.dataFolderTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F);
             this.dataFolderTextBox.Location = new System.Drawing.Point(47, 332);
             this.dataFolderTextBox.Name = "dataFolderTextBox";
-            this.dataFolderTextBox.Size = new System.Drawing.Size(246, 28);
+            this.dataFolderTextBox.Size = new System.Drawing.Size(229, 28);
             this.dataFolderTextBox.TabIndex = 3;
             // 
             // browseDataFolderButton
@@ -100,11 +100,11 @@
             this.browseDataFolderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(150)))), ((int)(((byte)(47)))));
             this.browseDataFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.browseDataFolderButton.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.browseDataFolderButton.Location = new System.Drawing.Point(299, 332);
+            this.browseDataFolderButton.Location = new System.Drawing.Point(282, 332);
             this.browseDataFolderButton.Name = "browseDataFolderButton";
-            this.browseDataFolderButton.Size = new System.Drawing.Size(56, 28);
+            this.browseDataFolderButton.Size = new System.Drawing.Size(73, 28);
             this.browseDataFolderButton.TabIndex = 7;
-            this.browseDataFolderButton.Text = "Browse";
+            this.browseDataFolderButton.Text = "Wählen";
             this.browseDataFolderButton.UseVisualStyleBackColor = false;
             this.browseDataFolderButton.Click += new System.EventHandler(this.browseDataFolderButton_Click);
             // 
@@ -125,11 +125,11 @@
             this.mediaFolderBrowseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(150)))), ((int)(((byte)(47)))));
             this.mediaFolderBrowseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mediaFolderBrowseButton.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.mediaFolderBrowseButton.Location = new System.Drawing.Point(299, 379);
+            this.mediaFolderBrowseButton.Location = new System.Drawing.Point(282, 379);
             this.mediaFolderBrowseButton.Name = "mediaFolderBrowseButton";
-            this.mediaFolderBrowseButton.Size = new System.Drawing.Size(56, 28);
+            this.mediaFolderBrowseButton.Size = new System.Drawing.Size(73, 28);
             this.mediaFolderBrowseButton.TabIndex = 14;
-            this.mediaFolderBrowseButton.Text = "Browse";
+            this.mediaFolderBrowseButton.Text = "Wählen";
             this.mediaFolderBrowseButton.UseVisualStyleBackColor = false;
             this.mediaFolderBrowseButton.Click += new System.EventHandler(this.mediaFolderBrowseButton_Click);
             // 
@@ -140,7 +140,7 @@
             this.mediaFolderTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F);
             this.mediaFolderTextBox.Location = new System.Drawing.Point(47, 379);
             this.mediaFolderTextBox.Name = "mediaFolderTextBox";
-            this.mediaFolderTextBox.Size = new System.Drawing.Size(246, 28);
+            this.mediaFolderTextBox.Size = new System.Drawing.Size(229, 28);
             this.mediaFolderTextBox.TabIndex = 4;
             // 
             // panel1
@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 580);
+            this.ClientSize = new System.Drawing.Size(404, 581);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.mediaFolderBrowseButton);
@@ -204,6 +204,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(420, 620);
+            this.MinimumSize = new System.Drawing.Size(420, 620);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PH KA StudIP Sync";

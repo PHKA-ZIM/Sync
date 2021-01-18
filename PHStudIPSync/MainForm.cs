@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,14 +40,14 @@ namespace PHStudIPSync
 
         private void browseDataFolderButton_Click(object sender, EventArgs e)
         {
-            using (var fbd = new FolderBrowserDialog())
+            using (var fbd = new CommonOpenFileDialog())
             {
-                fbd.Description = "Select a folder";
-                DialogResult result = fbd.ShowDialog();
+                fbd.IsFolderPicker = true;
+                var result = fbd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                if (result == CommonFileDialogResult.Ok && !string.IsNullOrWhiteSpace(fbd.FileName))
                 {
-                    dataFolderTextBox.Text = fbd.SelectedPath;
+                    dataFolderTextBox.Text = fbd.FileName;
                 }
             }
         }
@@ -61,14 +62,14 @@ namespace PHStudIPSync
 
         private void mediaFolderBrowseButton_Click(object sender, EventArgs e)
         {
-            using (var fbd = new FolderBrowserDialog())
+            using (var fbd = new CommonOpenFileDialog())
             {
-                fbd.Description = "Select a folder";
-                DialogResult result = fbd.ShowDialog();
+                fbd.IsFolderPicker = true;
+                var result = fbd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                if (result == CommonFileDialogResult.Ok && !string.IsNullOrWhiteSpace(fbd.FileName))
                 {
-                    mediaFolderTextBox.Text = fbd.SelectedPath;
+                    mediaFolderTextBox.Text = fbd.FileName;
                 }
             }
         }
