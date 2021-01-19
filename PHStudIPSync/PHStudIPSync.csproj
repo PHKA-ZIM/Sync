@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,9 +26,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://github.com/PHKA-ZIM/Sync/issues</SupportUrl>
+    <ErrorReportUrl>https://github.com/PHKA-ZIM/Sync/issues</ErrorReportUrl>
+    <ProductName>Sync</ProductName>
+    <PublisherName>PH Karlsruhe</PublisherName>
+    <SuiteName>PH Tools</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -52,6 +57,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>PHStudIPSync.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>phk-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -131,6 +145,7 @@
     <Content Include="img\ph_logo.png" />
     <Content Include="img\studip4-logo.png" />
     <Content Include="img\sync.png" />
+    <Content Include="phk-icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="scripts\sync\" />

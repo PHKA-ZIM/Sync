@@ -26,7 +26,6 @@ namespace PHStudIPSync
         private void SyncForm_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
-            //process.WaitForExit();
         }
 
         private void InitializeBackgroundWorker()
@@ -65,10 +64,12 @@ namespace PHStudIPSync
                     Arguments = "",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
+                    RedirectStandardError = true,
                     CreateNoWindow = true
                 }
             };
             process.OutputDataReceived += OutputDataReceived;
+            process.ErrorDataReceived += ErrorDataReceived;
             process.Start();
             process.BeginOutputReadLine();
             process.WaitForExit();
@@ -80,6 +81,13 @@ namespace PHStudIPSync
             string line = e.Data;
             backgroundWorker1.ReportProgress(0, line);
         }
+
+        private void ErrorDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            string line = e.Data;
+            backgroundWorker1.ReportProgress(0, line);
+        }
+
 
     }
 }
