@@ -1,6 +1,6 @@
 ﻿namespace PHStudIPSync
 {
-    partial class SyncForm
+    partial class SyncMessageBox
     {
         /// <summary>
         /// Required designer variable.
@@ -29,36 +29,29 @@
         private void InitializeComponent()
         {
             this.outputTextBox = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // outputTextBox
             // 
-            this.outputTextBox.Location = new System.Drawing.Point(12, 12);
+            this.outputTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.outputTextBox.Location = new System.Drawing.Point(0, 0);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.Size = new System.Drawing.Size(260, 237);
+            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.outputTextBox.Size = new System.Drawing.Size(473, 411);
             this.outputTextBox.TabIndex = 0;
-            this.outputTextBox.Text = "Ausgabe\r\n";
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.WorkerSupportsCancellation = true;
-            // 
-            // SyncForm
+            // SyncMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(473, 411);
             this.Controls.Add(this.outputTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximumSize = new System.Drawing.Size(300, 300);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "SyncForm";
+            this.Name = "SyncMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Synchronisiere...";
-            this.Load += new System.EventHandler(this.SyncForm_Load);
+            this.Text = "Synchronsiere...";
+            this.Load += new System.EventHandler(this.SyncMessageBox_Load);
+            this.Shown += new System.EventHandler(this.SyncMessageBox_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,6 +60,5 @@
         #endregion
 
         private System.Windows.Forms.TextBox outputTextBox;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

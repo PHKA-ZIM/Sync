@@ -32,10 +32,8 @@ namespace PHStudIPSync
 
         private void ExecuteSyncScript()
         {
-            var form = new SyncForm();
-            form.ShowDialog();
-
-            
+            var s = new SyncMessageBox();
+            s.ShowDialog();
         }
 
         private void CreateConfigFile()
