@@ -54,10 +54,23 @@ namespace PHStudIPSync
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            userNameTextBox.Text = "Username";
-            passwordTextBox.Text = "Password";
-            dataFolderTextBox.Text = "Data Folder";
-            mediaFolderTextBox.Text = "Media Folder";
+            var syncCommand = new SyncCommand();
+            if (syncCommand.HasConfig())
+            {
+                var config = syncCommand.GetConfig();
+                userNameTextBox.Text = config.user.login;
+                passwordTextBox.Text = config.user.password;
+                dataFolderTextBox.Text = config.files_destination;
+                mediaFolderTextBox.Text = config.media_destination;
+            }
+            else
+            {
+                userNameTextBox.Text = "Username";
+                passwordTextBox.Text = "Password";
+                dataFolderTextBox.Text = "Data Folder";
+                mediaFolderTextBox.Text = "Media Folder";
+            }
+           
         }
 
         private void mediaFolderBrowseButton_Click(object sender, EventArgs e)

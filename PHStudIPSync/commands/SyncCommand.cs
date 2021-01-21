@@ -45,5 +45,20 @@ namespace PHStudIPSync
                 serializer.Serialize(file, SyncCommandData);
             }
         }
+
+        public bool HasConfig()
+        {
+            return File.Exists(ConfigFilePath);
+        }
+
+        public SyncCommandData GetConfig()
+        {
+            using (StreamReader file = File.OpenText(ConfigFilePath))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                SyncCommandData config = (SyncCommandData)serializer.Deserialize(file, typeof(SyncCommandData));
+                return config;
+            }
+        }
     }
 }
