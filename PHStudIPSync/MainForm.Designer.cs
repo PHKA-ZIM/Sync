@@ -55,7 +55,7 @@
             this.userNameTextBox.BackColor = System.Drawing.Color.White;
             this.userNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userNameTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameTextBox.Location = new System.Drawing.Point(47, 254);
+            this.userNameTextBox.Location = new System.Drawing.Point(48, 243);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(308, 28);
             this.userNameTextBox.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.passwordTextBox.BackColor = System.Drawing.Color.White;
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.passwordTextBox.Location = new System.Drawing.Point(47, 288);
+            this.passwordTextBox.Location = new System.Drawing.Point(48, 277);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(308, 28);
@@ -78,7 +78,7 @@
             this.syncButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(150)))), ((int)(((byte)(47)))));
             this.syncButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.syncButton.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.syncButton.Location = new System.Drawing.Point(47, 436);
+            this.syncButton.Location = new System.Drawing.Point(48, 425);
             this.syncButton.Name = "syncButton";
             this.syncButton.Size = new System.Drawing.Size(308, 41);
             this.syncButton.TabIndex = 5;
@@ -91,7 +91,7 @@
             this.dataFolderTextBox.BackColor = System.Drawing.Color.White;
             this.dataFolderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dataFolderTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.dataFolderTextBox.Location = new System.Drawing.Point(47, 345);
+            this.dataFolderTextBox.Location = new System.Drawing.Point(48, 334);
             this.dataFolderTextBox.Name = "dataFolderTextBox";
             this.dataFolderTextBox.Size = new System.Drawing.Size(229, 28);
             this.dataFolderTextBox.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.browseDataFolderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(150)))), ((int)(((byte)(47)))));
             this.browseDataFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.browseDataFolderButton.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.browseDataFolderButton.Location = new System.Drawing.Point(282, 345);
+            this.browseDataFolderButton.Location = new System.Drawing.Point(283, 334);
             this.browseDataFolderButton.Name = "browseDataFolderButton";
             this.browseDataFolderButton.Size = new System.Drawing.Size(73, 28);
             this.browseDataFolderButton.TabIndex = 7;
@@ -114,7 +114,7 @@
             // savePasswordCheckBox
             // 
             this.savePasswordCheckBox.AutoSize = true;
-            this.savePasswordCheckBox.Location = new System.Drawing.Point(235, 322);
+            this.savePasswordCheckBox.Location = new System.Drawing.Point(236, 311);
             this.savePasswordCheckBox.Name = "savePasswordCheckBox";
             this.savePasswordCheckBox.Size = new System.Drawing.Size(120, 17);
             this.savePasswordCheckBox.TabIndex = 8;
@@ -128,7 +128,7 @@
             this.mediaFolderBrowseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(150)))), ((int)(((byte)(47)))));
             this.mediaFolderBrowseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mediaFolderBrowseButton.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.mediaFolderBrowseButton.Location = new System.Drawing.Point(282, 379);
+            this.mediaFolderBrowseButton.Location = new System.Drawing.Point(283, 368);
             this.mediaFolderBrowseButton.Name = "mediaFolderBrowseButton";
             this.mediaFolderBrowseButton.Size = new System.Drawing.Size(73, 28);
             this.mediaFolderBrowseButton.TabIndex = 14;
@@ -141,7 +141,7 @@
             this.mediaFolderTextBox.BackColor = System.Drawing.Color.White;
             this.mediaFolderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mediaFolderTextBox.Font = new System.Drawing.Font("Source Sans Pro", 12F);
-            this.mediaFolderTextBox.Location = new System.Drawing.Point(47, 379);
+            this.mediaFolderTextBox.Location = new System.Drawing.Point(48, 368);
             this.mediaFolderTextBox.Name = "mediaFolderTextBox";
             this.mediaFolderTextBox.Size = new System.Drawing.Size(229, 28);
             this.mediaFolderTextBox.TabIndex = 4;
@@ -153,7 +153,7 @@
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 203);
+            this.panel1.Size = new System.Drawing.Size(405, 203);
             this.panel1.TabIndex = 16;
             // 
             // pictureBox3
@@ -171,7 +171,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::PHStudIPSync.Properties.Resources.studip4_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(229, 516);
+            this.pictureBox2.Location = new System.Drawing.Point(230, 505);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(126, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +181,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PHStudIPSync.Properties.Resources.ph_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 516);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 505);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(404, 581);
+            this.ClientSize = new System.Drawing.Size(394, 581);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.mediaFolderBrowseButton);
@@ -211,8 +211,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(420, 620);
-            this.MinimumSize = new System.Drawing.Size(420, 620);
+            this.MaximumSize = new System.Drawing.Size(410, 620);
+            this.MinimumSize = new System.Drawing.Size(410, 620);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PH KA StudIP Sync";
