@@ -36,16 +36,6 @@ namespace PHStudIPSync
             s.ShowDialog();
         }
 
-        private void CreateConfigFile()
-        {
-            using (StreamWriter file = File.CreateText(ConfigFilePath))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Formatting = Formatting.Indented;
-                serializer.Serialize(file, SyncCommandData);
-            }
-        }
-
         public bool HasConfig()
         {
             return File.Exists(ConfigFilePath);
@@ -58,6 +48,26 @@ namespace PHStudIPSync
                 JsonSerializer serializer = new JsonSerializer();
                 SyncCommandData config = (SyncCommandData)serializer.Deserialize(file, typeof(SyncCommandData));
                 return config;
+            }
+        }
+
+        private void CreateConfigFile()
+        {
+            WriteConfig();
+        }
+
+        public void SaveConfig()
+        {
+            WriteConfig();
+        }
+
+        private void WriteConfig()
+        {
+            using (StreamWriter file = File.CreateText(ConfigFilePath))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Formatting = Formatting.Indented;
+                serializer.Serialize(file, SyncCommandData);
             }
         }
     }

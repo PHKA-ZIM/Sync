@@ -22,6 +22,39 @@ namespace PHStudIPSync
         
         private void syncButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(userNameTextBox.Text))
+            {
+                userNameTextBox.Focus();
+                errorProvider.SetError(userNameTextBox, "Benutzer angeben.");
+                return;
+            }
+            else
+            {
+                errorProvider.SetError(userNameTextBox, null);
+            }
+
+            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            {
+                userNameTextBox.Focus();
+                errorProvider.SetError(passwordTextBox, "Passwort angeben.");
+                return;
+            }
+            else
+            {
+                errorProvider.SetError(passwordTextBox, null);
+            }
+
+            if (string.IsNullOrEmpty(dataFolderTextBox.Text))
+            {
+                userNameTextBox.Focus();
+                errorProvider.SetError(dataFolderTextBox, "Ordner angeben.");
+                return;
+            }
+            else
+            {
+                errorProvider.SetError(dataFolderTextBox, null);
+            }
+
             var syncCommand = new SyncCommand();
 
             syncCommand.SetData(new SyncCommandData
@@ -32,7 +65,8 @@ namespace PHStudIPSync
                     password = passwordTextBox.Text
                 },
                 files_destination = dataFolderTextBox.Text,
-                media_destination = mediaFolderTextBox.Text
+                media_destination = mediaFolderTextBox.Text,
+                savePassword = savePasswordCheckBox.Checked
             });
             syncCommand.Execute();
         }
@@ -62,13 +96,15 @@ namespace PHStudIPSync
                 passwordTextBox.Text = config.user.password;
                 dataFolderTextBox.Text = config.files_destination;
                 mediaFolderTextBox.Text = config.media_destination;
+                savePasswordCheckBox.Checked = config.savePassword;
             }
             else
             {
                 userNameTextBox.Text = "Username";
-                passwordTextBox.Text = "Password";
+                passwordTextBox.Text = "";
                 dataFolderTextBox.Text = "Data Folder";
                 mediaFolderTextBox.Text = "Media Folder";
+                savePasswordCheckBox.Checked = false;
             }
            
         }
@@ -87,5 +123,24 @@ namespace PHStudIPSync
             }
         }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var syncCommand = new SyncCommand();
+
+            syncCommand.SetData(new SyncCommandData
+            {
+                user = new SyncCommandUser()
+                {
+                    login = userNameTextBox.Text,
+                    password = savePasswordCheckBox.Checked ? passwordTextBox.Text : ""
+                },
+                files_destination = dataFolderTextBox.Text,
+                media_destination = mediaFolderTextBox.Text,
+                savePassword = savePasswordCheckBox.Checked
+            });
+            syncCommand.SaveConfig();
+        }
+
+        
     }
 }

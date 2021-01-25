@@ -86,6 +86,7 @@
             this.Name = "SyncMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Synchronsiere...";
+            this.Load += new System.EventHandler(this.SyncMessageBox_Load);
             this.Shown += new System.EventHandler(this.SyncMessageBox_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -7,5 +7,6 @@
         public string auth_type = "general";
         public string files_destination;
         public string media_destination;
+        public bool savePassword = false;
     }
 }
