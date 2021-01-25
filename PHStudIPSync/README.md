@@ -1,3 +1,6 @@
 # Sync
 
-GUI für das Studip Sync programm.
+Mit diesem Tool kann man die Dateien aus dem PH Karlsruhe StudIP herunterladen.
+
+
+![Image of Sync]()
